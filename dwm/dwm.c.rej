@@ -1,0 +1,14 @@
+--- dwm.c
++++ dwm.c
+@@ -1897,10 +1875,7 @@ updategeom(void)
+ 					m->clients = c->next;
+ 					detachstack(c);
+ 					c->mon = mons;
+-					if( attachbelow )
+-						attachBelow(c);
+-					else
+-						attach(c);
++					attach(c);
+ 					attachstack(c);
+ 				}
+ 				if (m == selmon)
