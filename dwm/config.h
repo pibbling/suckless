@@ -70,7 +70,8 @@ static const char *lockcmd[]  = { "slock", NULL };
 static const char *shotcmd[]  = { "shot", NULL };
 static const char *volup[]    = { "volup", NULL };
 static const char *voldn[]    = { "voldn", NULL };
-
+static const char *blup[]     = { "blup", NULL };
+static const char *bldn[]     = { "bldn", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -110,7 +111,8 @@ static const Key keys[] = {
         { SUPER,                        XK_s,      spawn,          {.v = shotcmd } },
         { SUPER,                        XK_equal,  spawn,          {.v = volup } },
         { SUPER,                        XK_minus,  spawn,          {.v = voldn } },
-
+	{ 0,                  		0x1008ff02, spawn,         {.v = blup } },
+        { 0,        		        0x1008ff03, spawn,         {.v = bldn } },
 };
 
 /* button definitions */
