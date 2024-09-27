@@ -69,7 +69,7 @@ static const struct arg args[] = {
 
 	{ ram_perc,    "[RAM %s%] ", NULL },
 
-	//{ run_command, "[VOL%4s] ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
+	{ run_command, "[VOL%4s] ", "amixer sget Master | awk -F\"[][]\" '/%/ { print $2 }' | head -n1" },
     
     //{ keymap,     " [KMAP %s] -", NULL },
 
