@@ -68,6 +68,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *shotcmd[]  = { "shot", NULL };
+static const char *volup[]    = { "volup", NULL };
+static const char *voldn[]    = { "voldn", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -106,6 +108,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ SUPER,			XK_l,	   spawn,	   {.v = lockcmd } },
         { SUPER,                        XK_s,      spawn,          {.v = shotcmd } },
+        { SUPER,                        XK_equal,  spawn,          {.v = volup } },
+        { SUPER,                        XK_minus,  spawn,          {.v = voldn } },
+
 };
 
 /* button definitions */
